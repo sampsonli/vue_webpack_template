@@ -31,7 +31,7 @@ module.exports = {
                 include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/,
                 use: [
-                    'babel-loader',
+                    'babel-loader?cacheDirectory',
                 ],
             },
             {
