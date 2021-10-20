@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+.idea
+config
+dist
+tmp
+yarn-error.log
+/log/
+!/log/.gitkeep
+/sh.exe.stackdump
+log/
+.vscode
