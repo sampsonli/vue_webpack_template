@@ -8,8 +8,8 @@
 }
 
 .h-ct {
-    margin-top: .2rem;
-    line-height: .44rem;
+    /* margin-top: .2rem; */
+    line-height: .64rem;
     overflow: hidden;
     text-align: center;
     position: relative;
@@ -19,7 +19,7 @@
 .h-back {
     /*float: left;*/
     position: absolute;
-    top: .17rem;
+    top: .27rem;
     left: .15rem;
     width: .08rem;
     height: .08rem;

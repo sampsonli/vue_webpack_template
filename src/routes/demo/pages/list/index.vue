@@ -8,7 +8,7 @@
             >
                 <i class="h-back" />
                 <span class="h-title">
-                    漫话历史-{{model.title}}
+                    漫话历史-{{ model.title }}
                 </span>
             </div>
         </div>
@@ -17,27 +17,20 @@
                 class="l-full"
                 ref="container"
             >
-               tttttttttttttt-{{model.bb}}
+                tttttttttttttt-{{ model.bb }}
             </div>
         </div>
     </div>
 </template>
 <script>
-    import { Component, Vue } from 'vue-property-decorator'
     import { getModule } from 'vuex-module-decorators';
     import DemoModule from '../../modules/DemoModule';
-    const model = getModule(DemoModule)
-    
-    @Component({ name: 'List'})
-    class List extends Vue {
-        /**
-         * @type {DemoModule}
-         */
-        model = model;
-        mounted() {
-            
-        }
+    const model = getModule(DemoModule);
+    export default {
+        name: 'List',
+        data: () => {
+            return { model };
+        },
+    };
 
-    }
-    export default List;
 </script>
