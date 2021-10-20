@@ -30,6 +30,9 @@
     
     @Component({ name: 'List'})
     class List extends Vue {
+        /**
+         * @type {DemoModule}
+         */
         model = model;
         mounted() {
             
