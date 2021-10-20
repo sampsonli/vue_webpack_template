@@ -1,6 +1,6 @@
-<style scoped src="./style.css"></style>
+<style src="./style.less"></style>
 <template>
-    <div class="l-full l-flex-column container">
+    <div class="demo-container">
         <div class="header">
             <div
                 class="h-ct"
@@ -12,25 +12,17 @@
                 </span>
             </div>
         </div>
-        <div class="l-flex-1 l-relative">
-            <div
-                class="l-full"
-                ref="container"
-            >
-                tttttttttttttt-{{ model.bb }}
-            </div>
+        <div class="content">
+            tttttttttttttt-{{ model.title }}
         </div>
     </div>
 </template>
 <script>
     import { getModule } from 'vuex-module-decorators';
     import DemoModule from '../../modules/DemoModule';
-    const model = getModule(DemoModule);
     export default {
         name: 'List',
-        data: () => {
-            return { model };
-        },
+        data: () => ({ model: getModule(DemoModule) }),
     };
 
 </script>
