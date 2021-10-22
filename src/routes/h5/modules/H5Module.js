@@ -1,8 +1,8 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
 import store from '~/store';
-const name = module.id.split('/').join('-');
-@Module({ dynamic: true, store, name, namespaced: true })
-class DemoModule extends VuexModule {
+
+@Module({ dynamic: true, store, name: 'h5', namespaced: true })
+class H5Module extends VuexModule {
     title = 'hello world'
 
     @Mutation
@@ -17,4 +17,4 @@ class DemoModule extends VuexModule {
     }
 }
 
-export default DemoModule;
+export default H5Module;

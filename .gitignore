@@ -10,3 +10,4 @@ yarn-error.log
 /sh.exe.stackdump
 log/
 .vscode
+ddns.js
