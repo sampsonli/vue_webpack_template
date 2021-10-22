@@ -23,7 +23,7 @@
 //               佛祖保佑         永无BUG
 //
 /**
- * Created by lichun on 2018/9/8.
+ * Created by lichun on 2021/10/22.
  */
 import 'es6-promise/auto';
 import Vue from 'vue';
@@ -43,3 +43,6 @@ const app = new Vue({
     template: '<router-view/>',
 });
 export { app, router, store };
+if (module.hot) {
+    module.hot.accept();
+}
