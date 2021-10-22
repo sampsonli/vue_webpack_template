@@ -9,7 +9,7 @@ module.exports = {
         ignored: /node_modules/,
     },
     entry: {
-        entry: [
+        main: [
             'webpack-hot-middleware/client?reload=true&path=/__webpack_hmr', // webpack热更新插件，就这么写
             './src/main.js', // 项目入口
         ],
@@ -92,7 +92,6 @@ module.exports = {
                     minSize: 3000,
                     minChunks: 2,
                     maxAsyncRequests: 5,
-                    maxInitialRequests: 3,
                     priority: -1,
                     reuseExistingChunk: true,
                 },

@@ -1,0 +1,51 @@
+.demo-container {
+    font-size: .2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    .header {
+        height: .64rem;
+        background-image: linear-gradient(-90deg, #0387FF 0%, #02AAFF 100%);
+
+        .h-ct {
+            /* margin-top: .2rem; */
+            line-height: .64rem;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+
+        }
+
+        .h-back {
+            /*float: left;*/
+            position: absolute;
+            top: .27rem;
+            left: .15rem;
+            width: .08rem;
+            height: .08rem;
+            border-left: .02rem solid white;
+            border-bottom: .02rem solid white;
+            transform: rotate(45deg);
+
+        }
+
+        .h-title {
+            color: #FFFFFF;
+            font-size: .18rem;
+            font-weight: 500;
+
+        }
+    }
+    .content {
+        height: 0;
+        flex: 1;
+        background: palegoldenrod;
+    }
+
+}
+
+

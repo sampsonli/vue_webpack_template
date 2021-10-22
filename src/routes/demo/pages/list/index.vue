@@ -1,43 +1,32 @@
-<style scoped src="./style.css"></style>
+<style src="./style.less"></style>
 <template>
-    <div class="l-full l-flex-column container">
+  <div class="demo-container">
         <div class="header">
             <div
                 class="h-ct"
-                v-tap="{methods: model.changeTitle}"
             >
                 <i class="h-back" />
                 <span class="h-title">
-                    漫话历史-{{model.title}}
+                    漫话历史-{{ model.title }}
                 </span>
             </div>
         </div>
-        <div class="l-flex-1 l-relative">
-            <div
-                class="l-full"
-                ref="container"
+        <div class="content">
+            lichun-{{ model.title }}
+            <button
+                @click="model.changeTitle()"
+                type="primary"
             >
-               tttttttttttttt-{{model.bb}}
-            </div>
+                hello
+            </button>
         </div>
     </div>
 </template>
 <script>
-    import { Component, Vue } from 'vue-property-decorator'
-    import { getModule } from 'vuex-module-decorators';
-    import DemoModule from '../../modules/DemoModule';
-    const model = getModule(DemoModule)
-    
-    @Component({ name: 'List'})
-    class List extends Vue {
-        /**
-         * @type {DemoModule}
-         */
-        model = model;
-        mounted() {
-            
-        }
-
-    }
-    export default List;
+import { getModule } from "vuex-module-decorators";
+import DemoModule from "../../modules/DemoModule";
+export default {
+  name: "List",
+  data: () => ({ model: getModule(DemoModule) }),
+};
 </script>

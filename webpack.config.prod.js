@@ -88,7 +88,6 @@ module.exports = {
                     minSize: 3000,
                     minChunks: 2,
                     maxAsyncRequests: 5,
-                    maxInitialRequests: 3,
                     priority: -1,
                     reuseExistingChunk: true,
                 },

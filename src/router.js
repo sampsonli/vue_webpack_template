@@ -20,5 +20,5 @@ const views = [];
 export default new VueRouter({
     // mode: process.env.PUB_PATH ? 'history' : 'hash',
     mode: 'hash',
-    routes: [...views, { path: '*', redirect: { path: 'demo/' } }],
+    routes: [...views, { path: '*', redirect: { path: views[0].path } }],
 });

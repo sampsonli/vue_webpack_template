@@ -1,8 +1,8 @@
 {
-  "name": "vuewebpack5",
+  "name": "vue_template_project",
   "version": "1.0.1",
   "main": "index.js",
-  "description": "A Vuejs template using Webpack 5",
+  "description": "A Vuejs2 template using Webpack 5",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist/* &&  webpack --config webpack.config.prod.js",
@@ -12,7 +12,7 @@
     "prod": "npm run build && cross-env NODE_ENV=production PORT=3000 node server.js"
   },
   "keywords": [
-    "Vue",
+    "Vue 2",
     "Webpack 5"
   ],
   "author": "Sampson Li",
@@ -27,11 +27,12 @@
     "@babel/preset-typescript": "^7.15.0",
     "@types/webpack": "^5.28.0",
     "autoprefixer": "^10.3.7",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "core-js": "^3.18.3",
     "cross-env": "^7.0.3",
     "css-loader": "^6.4.0",
-    "eslint": "^8.0.1",
+    "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^11.1.0",
@@ -39,6 +40,7 @@
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^5.1.0",
     "express": "^4.16.4",
+    "filemanager-webpack-plugin": "^6.1.7",
     "forward-request": "^1.0.3",
     "html-webpack-plugin": "^5.4.0",
     "less": "^4.1.2",
