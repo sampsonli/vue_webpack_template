@@ -19,10 +19,9 @@ class DemoModule extends VuexModule {
     }
 
     @Action
-    changeTitle() {
-
+    changeTitle () {
         // this.context.commit('SET_TITLE', Math.floor(Math.random() * 1000))
-        this.SET_TITLE(Math.floor(Math.random() * 1000))
+        this.SET_TITLE(Math.floor(Math.random() * 1000));
     }
 }
 

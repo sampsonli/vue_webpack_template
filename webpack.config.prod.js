@@ -83,22 +83,40 @@ module.exports = {
             maxAsyncRequests: Infinity,
             maxInitialRequests: Infinity,
             cacheGroups: {
-                async: {
-                    chunks: 'async',
-                    minSize: 3000,
-                    minChunks: 2,
-                    maxAsyncRequests: 5,
-                    priority: -1,
+                h5: {
+                    chunks: 'async', // 必须三选一： "initial" | "all" | "async"(默认就是异步)
+                    name: 'h5-common',
                     reuseExistingChunk: true,
+                    priority: 2,
+                    minChunks: 1,
+                    test: /\/h5\//,
+                },
+                pc: {
+                    chunks: 'async', // 必须三选一： "initial" | "all" | "async"(默认就是异步)
+                    name: 'pc-common',
+                    reuseExistingChunk: true,
+                    priority: 2,
+                    minChunks: 1,
+                    test: /\/pc\//,
                 },
                 commons: {
                     name: 'commons',
                     chunks: 'all', // 必须三选一： "initial" | "all" | "async"(默认就是异步)
                     reuseExistingChunk: true,
-                    priority: 1,
+                    priority: 10,
                     minChunks: 1,
                     enforce: true,
-                    test: /[\\/]node_modules[\\/](@babel|core-js|css-loader|style-loader|ansi-html|html-entities|querystring)/,
+                    test: /[\\/]node_modules[\\/](@babel|core-js|css-loader|style-loader|webpack-hot-middleware|ansi-html|html-entities|querystring)/,
+                },
+
+                vendors: {
+                    name: 'vendors',
+                    chunks: 'initial', // 必须三选一： "initial" | "all" | "async"(默认就是异步)
+                    reuseExistingChunk: true,
+                    priority: 11,
+                    minChunks: 1,
+                    enforce: true,
+                    test: /[\\/]node_modules[\\/]/,
                 },
 
             },

@@ -15,8 +15,9 @@ const views = [];
     });
 })(
     require.context('./', true, /\.\/routes\/([^/]+)\/route.js$/),
-    // require.context('./', true, /\.\/routes\/(demo)\/route.js$/)
+    // require.context('./', true, /\.\/routes\/(h5)\/route.js$/)
 );
+console.log(views);
 export default new VueRouter({
     // mode: process.env.PUB_PATH ? 'history' : 'hash',
     mode: 'hash',
