@@ -1,17 +1,9 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
 import store from '~/store';
-
-@Module({ dynamic: true, store, name: 'demo', namespaced: true })
+const name = module.id.split('/').join('-');
+@Module({ dynamic: true, store, name, namespaced: true })
 class DemoModule extends VuexModule {
-    aa = 1234;
-
     title = 'hello world'
-
-    bb = 'hello world';
-
-    get aplusb () {
-        return this.aa + this.bb;
-    }
 
     @Mutation
     SET_TITLE (title) {
